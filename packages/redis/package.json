@@ -1,0 +1,19 @@
+{
+  "name": "@pulse/redis",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "author": "dhruvsol",
+  "devDependencies": {
+    "@types/node": "^20.7.0",
+    "eslint-config-custom": "workspace:*"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint-config-custom/library"
+    ]
+  },
+  "dependencies": {
+    "ioredis": "^5.3.2",
+    "typescript": "^4.5.3"
+  }
+}
