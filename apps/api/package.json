@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/*.ts --bundle --platform=node --outdir=dist/ --external:express --external:cors",
+    "build:cron": "esbuild src/cron.ts --bundle --platform=node --outdir=dist/ --external:node-cron",
+    "build:lcron": "esbuild src/lcron.ts --bundle --platform=node --outdir=dist/ --external:node-cron",
+    "start": "node dist/index.js",
+    "start:cron": "node dist/cron.js",
+    "start:lcron": "node dist/lcron.js",
+    "dev:api": "tsx watch src/index.ts",
+    "db:gen": "prisma generate",
+    "studio": "prisma studio",
+    "db:push": "prisma db push"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^17.0.12",
+    "dotenv": "^16.3.1",
+    "esbuild": "^0.18.18",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
