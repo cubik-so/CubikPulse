@@ -1,5 +1,5 @@
 {
-  "name": "CubikPulse",
+  "name": "cubik-pulse",
   "private": true,
   "scripts": {
     "build": "turbo run build",
