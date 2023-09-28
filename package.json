@@ -13,8 +13,8 @@
     "tsconfig": "workspace:*",
     "turbo": "latest"
   },
+  "packageManager": "pnpm@8.6.10",
   "dependencies": {
     "husky": "^8.0.3"
-  },
-  "packageManager": "pnpm@8.6.10"
+  }
 }
