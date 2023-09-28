@@ -26,6 +26,9 @@ importers:
       '@pulse/redis':
         specifier: workspace:*
         version: link:../../packages/redis
+      '@pulse/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       cors:
         specifier: ^2.8.5
         version: 2.8.5
