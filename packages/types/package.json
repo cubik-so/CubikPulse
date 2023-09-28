@@ -1,0 +1,8 @@
+{
+  "name": "@pulse/types",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
