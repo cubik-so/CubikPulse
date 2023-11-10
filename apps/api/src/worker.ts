@@ -30,12 +30,10 @@ async function main() {
   const keypair = web3.Keypair.generate();
   const wallet = new Wallet(keypair);
   const connection = new web3.Connection(
-    "https://devnet.helius-rpc.com/?api-key=d17f1226-b554-443e-978e-b41d01825ea4",
+    process.env.RPC_URL || "https://api.devnet.solana.com",
     "confirmed",
   );
-  const PROGRAM_ID = new web3.PublicKey(
-    "H8cQEqKuCU7uK2211tdEJ8pPFiT8L114Dj1d36LqeE5i",
-  );
+  const PROGRAM_ID = new web3.PublicKey(process.env.PROGRAM_ID as string);
   const provider = new AnchorProvider(connection, wallet, {});
   const cubikProgram = new Program(IDL, PROGRAM_ID, provider);
   const coder = new BorshCoder(IDL);
