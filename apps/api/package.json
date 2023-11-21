@@ -4,12 +4,9 @@
   "private": true,
   "scripts": {
     "build": "esbuild src/*.ts --bundle --platform=node --outdir=dist/ --external:express --external:cors",
-    "build:cron": "esbuild src/cron.ts --bundle --platform=node --outdir=dist/ --external:node-cron",
-    "build:lcron": "esbuild src/lcron.ts --bundle --platform=node --outdir=dist/ --external:node-cron",
     "start": "node dist/index.js",
-    "start:cron": "node dist/cron.js",
-    "start:lcron": "node dist/lcron.js",
     "dev:api": "tsx watch src/index.ts",
+    "dev:worker": "tsx watch src/worker.ts",
     "db:gen": "prisma generate",
     "studio": "prisma studio",
     "db:push": "prisma db push"
@@ -26,6 +23,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
     "@pulse/redis": "workspace:*",
     "@pulse/types": "workspace:*",
     "cors": "^2.8.5",
